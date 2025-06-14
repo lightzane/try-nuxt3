@@ -1,3 +1,4 @@
+import { url } from '@/data/url';
 import type { Post } from './posts'
 
 export interface Category {
@@ -15,9 +16,9 @@ export interface CategoryDetails {
 }
 
 export const getCategoriesUrl = () => (
-  'http://localhost:3001/categories'
+  `${url}/categories`
 )
 
 export const getCategoryDetailsUrl = (categorySlug: string) => (
-  `http://localhost:3001/categories/${categorySlug}?_embed=posts`
+  `${url}/categories/${categorySlug}?_embed=posts`
 )

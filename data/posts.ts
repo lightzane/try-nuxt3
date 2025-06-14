@@ -1,3 +1,4 @@
+import { url } from '@/data/url';
 import type { Category } from './categories'
 
 export interface Post {
@@ -17,11 +18,11 @@ export interface PostDetails {
 }
 
 export const getPostsUrl = () => (
-  'http://localhost:3001/posts'
+  `${url}/posts`
 )
 
 export const getPostDetailsUrl = (postSlug: string) => (
-  `http://localhost:3001/post-details/${postSlug}?_expand=category`
+  `${url}/post-details/${postSlug}?_expand=category`
 )
 
 export const getPosts = async (): Promise<Post[]> => {
