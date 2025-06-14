@@ -13,6 +13,10 @@
 import type { PostDetails } from '@/data/posts';
 import { getPostDetailsUrl } from '@/data/posts';
 
+definePageMeta({
+  layout: 'breadcrumb',
+});
+
 // const slug = useRoute().params['post']
 // const slug = useRoute().params.post.toString();
 const slug = useParam('post');
@@ -25,6 +29,15 @@ const slug = useParam('post');
 */
 
 const { data: post } = await useFetch<PostDetails>(getPostDetailsUrl(slug));
+
+const categoryState = useCategoryState();
+
+if (post.value) {
+  categoryState.value = {
+    name: post.value.category.name,
+    slug: post.value.category.slug,
+  };
+}
 </script>
 
 <template>
