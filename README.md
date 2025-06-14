@@ -27,3 +27,20 @@ Start the mock API server:
 ```bash
 npm run mock-api
 ```
+
+## Notes
+
+`app.vue` before it was updated
+
+```vue
+<template>
+  <div class="layout">
+    <!-- 
+      NuxtPage: 
+      - Placeholder for the current page 
+      - Suitable for Single-Layout sites else use NuxtLayout which allows different layout per page
+    -->
+    <NuxtPage />
+  </div>
+</template>
+```

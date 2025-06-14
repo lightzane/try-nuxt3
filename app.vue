@@ -1,14 +1,19 @@
+<!-- 
+  This file contains a Site-Wide UI elements
+-->
+
 <template>
-  <div class="layout">
+  <NuxtLayout>
+    <!-- 
+      NuxtPage: 
+      - Placeholder for the current page 
+      - Suitable for Single-Layout sites else use NuxtLayout which allows different layout per page
+      - This will be passed to the <slot /> in @/layouts/default.vue
+    -->
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style lang="scss">
-@use "@/assets/styles/global.scss";
-
-.layout {
-  width: 620px;
-  margin: 50px auto 50px;
-}
+@use '@/assets/styles/global.scss';
 </style>
