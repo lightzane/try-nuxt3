@@ -8,7 +8,7 @@ Cloned from: https://github.com/Code-Pop/Real-World-Nuxt-3
 
 Cloned via `git clone https://github.com/Code-Pop/Real-World-Nuxt-3 -b L2-start`
 
-## How to run this app
+## How to run this app ![](https://img.shields.io/badge/node-22.16.0-green?style=flat) ![](https://img.shields.io/badge/npm-10.9.2-2ecc71?style=flat)
 
 Install the dependencies:
 

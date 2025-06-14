@@ -22,14 +22,15 @@ const isHover = ref(false); // ref() is from vue.js api which is automatically i
           - /utils
         -->
       <RenderMarkdown :source="post.intro"></RenderMarkdown>
-      <a
+      <!-- NuxtLink allows page transition in SPA without full-page reload -->
+      <NuxtLink
         class="more"
-        href="#"
+        :to="`/posts/${post.slug}`"
         @mouseenter="isHover = true"
         @mouseleave="isHover = false"
       >
         More ...
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>

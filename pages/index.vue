@@ -25,6 +25,7 @@ const { data: posts } = await useFetch<Post[]>(getPostsUrl());
       - /components
       - /composables
       - /utils
+      - framework-provided functions (i.e. useFetch(), useRoute())
     -->
     <!-- prettier-ignore -->
     <PostCard 
