@@ -152,7 +152,13 @@ export default defineNuxtConfig({
 
 Reference: https://nuxt.com/deploy/github-pages
 
-[`.github/workflows/deploy.yaml`](./.github/workflows/deploy.yaml)
+[`.github/workflows/deploy.yaml`](./.github/workflows/deploy.yaml#L19)
+
+If not using custom domain, you need to set `NUXT_APP_BASE_URL`
+
+```
+NUXT_APP_BASE_URL=/<repository>/ npx nuxt build --preset github_pages
+```
 
 <!-- prettier-ignore -->
 ```yaml
@@ -198,3 +204,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ```
+
+This may work but find a better alternative for the Mock API server
